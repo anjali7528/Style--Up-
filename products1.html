@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>StyleUP</title>
+    <style>
+    
+        .card-img-top:hover
+         {
+            box-shadow: 0 0 20px rgba(33,33,33,.2); 
+         }
+         .text{
+            
+             text-transform: uppercase;
+    color: #3e4152;
+    letter-spacing: .15em;
+    font-size: 1.8em;
+    margin: 50px 0 10px 30px;
+    max-height: 5em;
+    font-weight: 500
+         }
+
+         
+         #img:hover {
+        height:55px;
+		width:55px;
+}
+        .cat{
+            box-shadow: 0 0 20px rgba(33,33,33,.2); 
+           padding-bottom:2%;
+        
+        }
+        .GB{
+            border-radius:50%;
+            padding:2%;
+            background-color:#D6DBDF ;
+        }
+        .GB:hover{
+            box-shadow: 0 0 20px rgba(33,33,33,.2); 
+        }
+        .gift{
+            box-shadow: 0 0 20px rgba(33,33,33,.2); 
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        .send{
+            background-color:#D6DBDF ;
+
+        }
+        .send:hover{
+            box-shadow: 0 0 20px rgba(33,33,33,.2); 
+        }
+        .row{
+          margin:0.5%;
+          
+        }
+
+
+    </style>
+</head>
+ 
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	
+        <a class="navbar-brand" href="home.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVluUR_gITC8pG7vYq9__7fpx7p_eiLwWZQw&usqp=CAU" height="30" width="30"/>Style-UP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">HOME <span
+                            class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="men.html">MEN<span
+                            class="sr-only"></span></a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="Women.html">WOMEN<span
+                            class="sr-only"></span></a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="Kids.html">KIDS<span
+                            class="sr-only"></span></a>
+                </li>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+            </ul>
+        </div>
+        
+
+
+        <!-- Button trigger login modal -->
+        <button type="button" class="btn btn-primary mx-2" data-toggle="modal" data-target="#LoginModal">
+            Log In
+        </button>
+
+        <!--login Modal -->
+        <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleLoginModalLabel">Log In</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="/login/">
+                            <div class="form-group">
+                                <label for="exampleInputUserName">Username</label>
+                                <input type="text" class="form-control" id="exampleInputUsername"
+                                    aria-describedby="usernameHelp" name="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                            </div>
+                            <button type="submit" class="btn btn-success">Log In</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button trigger SignUp modal -->
+        <button type="button" class="btn btn-primary mx-2" data-toggle="modal" data-target="#SignUpModal">
+            Sign Up
+        </button>
+
+        <!--SignUp Modal -->
+        <div class="modal fade" id="SignUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalSignUpLabel">Sign-Up</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="/signup/">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="Email.." name="email1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputUsername">Username</label>
+                                <input type="text" class="form-control" id="exampleInputUserName" name="username1">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="pass1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleConfirmPassword">Re-Type Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="pass2">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <center><b><H1> Men's Clothing</H1></b></center>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+               <a href="prod.html"><img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/4318138/2018/5/4/11525433792765-HERENOW-Men-Black-Printed-Round-Neck-T-shirt-2881525433792598-1.jpg">
+            <p style="display: inline-block; margin:5%;" > <b>HERE AND NOW</b><BR>Men T- Shirt<BR><BR><b>COST: </b>₹374</p>
+            </a>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                 <a href=""><img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1700944/2019/6/8/972c9498-3a37-4d5d-976c-4493b4d5c0021559989322793-HRX-by-Hrithik-Roshan-Men-Yellow-Printed-Round-Neck-T-Shirt--1.jpg">
+              <p style="display: inline-block; margin:5%;" > <b>HRX </b><BR>Round Men T- Shirt<BR><BR><b>COST: </b>₹559</p>
+              </a>
+  
+              </div>
+            </div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+               <a href=""><img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11166424/2020/3/24/b8c0e673-d182-4de5-ae0d-c8a0e3faa2381585042262856-Levis-Men-Shirts-2021585042257540-1.jpg">
+            <p style="display: inline-block; margin:5%;" > <b>Nautica</b><BR>Printed Men T- Shirt<BR><BR><b>COST: </b>₹679</p>
+            </a>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                 <a href=""><img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/9911407/2019/11/20/82aa2470-4de1-4384-9d5f-42e513aecb3d1574243840667-Levis-Men-Black-Slim-Fit-Solid-Casual-Shirt-8461574243838899-1.jpg">
+              <p style="display: inline-block; margin:5%;" > <b>U.S. Polo Assn. </b><BR>Striped Men T- Shirt<BR><BR><b>COST: </b>₹949</p>
+              </a>
+  
+              </div>
+            </div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+               <a href=""><img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11630310/2020/8/24/d20da669-81c4-47b8-8ec4-927cfca2a1511598268901951-Nautica-Men-Blue-Printed-Round-Neck-T-shirt-9491598268900357-1.jpg">
+            <p style="display: inline-block; margin:5%;" > <b>Nautica</b><BR>Printed Men T- Shirt<BR><BR><b>COST: </b>₹679</p>
+            </a>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                 <a href=""><img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/7026225/2018/8/24/2bddb4a0-f212-4c4f-878b-db5221e45ea01535109766100-US-Polo-Assn-Men-White-Striped-Polo-Collar-T-shirt-854153510-1.jpg">
+              <p style="display: inline-block; margin:5%;" > <b>U.S. Polo Assn. </b><BR>Striped Men T- Shirt<BR><BR><b>COST: </b>₹949</p>
+              </a>
+  
+              </div>
+            </div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+               <a href=""><img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11372996/2020/9/21/90a72f68-9afd-4176-8ce1-dd029cb53a201600671742466TshirtsCalvinKleinJeansMenTshirtsCalvinKleinJeansMenTshirtsC1.jpg">
+            <p style="display: inline-block; margin:5%;" > <b>Calvin Klein Jeans</b><BR>Men Jeans<BR><BR><b>COST: </b>₹9599</p>
+            </a>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                 <a href=""><img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10415112/2019/9/4/0ae9528c-e892-41be-921b-18564061fddb1567589962452-Harvard-Men-Jeans-9461567589960451-1.jpg">
+              <p style="display: inline-block; margin:5%;" > <b>Harvard </b><BR>Skinny fit jeans<BR><BR><b>COST: </b>₹719</p>
+              </a>
+  
+              </div>
+            </div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+               <a href=""><img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/2/6/7255ad96-4bf3-49a6-b5e4-975e50c278861580946249204-1.jpg">
+            <p style="display: inline-block; margin:5%;" > <b>H&M</b><BR>Men Cotton T- Shirt<BR><BR><b>COST: </b>₹399</p>
+            </a>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                 <a href=""><img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12279578/2020/9/30/bad7bb93-39ee-4692-b70a-6c8b825786141601449690585-Allen-Solly-Men-White-Striped-Polo-Collar-T-shirt-6161601449-1.jpg">
+              <p style="display: inline-block; margin:5%;" > <b>Allen Solly </b><BR>Striped Men T- Shirt<BR><BR><b>COST: </b>₹1299</p>
+              </a>
+  
+              </div>
+            </div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+               <a href=""><img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/9375593/2019/11/11/76b19e95-b42d-4f52-adbc-387edc0f13b01573457212955-Superdry-Men-Grey-Printed-Polo-Collar-T-shirt-73415734572109-1.jpg">
+            <p style="display: inline-block; margin:5%;" > <b>Superdry</b><BR>Men Polo T- Shirt<BR><BR><b>COST: </b>₹3274</p>
+            </a>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                 <a href=""><img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12318310/2020/9/21/2975191f-249a-4be0-848c-191a5e297d731600686352070-Calvin-Klein-Jeans-Men-Tshirts-8251600686350768-1.jpg">
+              <p style="display: inline-block; margin:5%;" > <b>Calvin Klein Jeans</b><BR>Solid Men T- Shirt<BR><BR><b>COST: </b>₹3299</p>
+              </a>
+  
+              </div>
+            </div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+               <a href=""><img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11206712/2020/2/25/83e5e641-5065-4cb6-a269-3d4c3eea7d5e1582631398797-Jack--Jones-Men-Tshirts-3321582631396629-1.jpg">
+            <p style="display: inline-block; margin:5%;" > <b>Jack & Jones</b><BR> Slim Fit T- Shirt<BR><BR><b>COST: </b>₹599</p>
+            </a>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                 <a href=""><img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/9/10/5671f42f-217f-4e9a-9dd5-b55f00ed4ed51599689422514-1.jpg">
+              <p style="display: inline-block; margin:5%;" > <b>Classic Polo</b><BR>Round Men T- Shirt<BR><BR><b>COST: </b>₹1119</p>
+              </a>
+  
+              </div>
+            </div>
+          </div>
+      </div>
+             
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+			
+			<div  style="background-color:#adb5bd78;">
+                <hr >
+                <!-- Footer -->
+                <footer class="page-footer font-small ">
+                
+                  <!-- Footer Links -->
+                  <div class="container">
+                
+                    <!-- Grid row-->
+                    <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+                
+                      <!-- Grid column -->
+                      <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                          <a href="Gift.html" Style="color:#495057;">Gift Cards</a>
+                        </h6>
+                      </div>
+                    
+                      <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                          <a href="FAQ.html"Style="color:#495057;">Help</a>
+                        </h6>
+                      </div>
+                      <!-- Grid column -->
+                
+                      <!-- Grid column -->
+                      <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                          <a href="https://openweather.co.uk/storage/app/media/Terms/Openweather_website_terms_and_conditions_of_use.pdf"Style="color:#495057;">Policy</a>
+                        </h6>
+                      </div>
+                      
+                      <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                          <a href="FAQ.html"Style="color:#495057;">Contact</a>
+                        </h6>
+                      </div>
+                      <!-- Grid column -->
+                
+                    </div>
+                    <!-- Grid row-->
+                    <hr class="rgba-white-light" style="margin: 0 15%;">
+                
+                    <!-- Grid row-->
+                    <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+                
+                      <!-- Grid column -->
+                      <div class="col-md-8 col-12 mt-5">
+                        <p style="line-height: 1.7rem"> <b>ONLINE SHOPPING MADE EASY AT Style-UP</b>
+                            <br>
+                           <br>
+                            If you would like to experience the best of online shopping for 
+                            men, women and kids in India, you are at the right place. 
+                            Style-UP is the ultimate destination for fashion and lifestyle,
+                             being host to a wide array of merchandise including clothing,
+                              footwear, accessories, jewellery, personal care products and 
+                              more. It is time to redefine your style statement with our 
+                              treasure-trove of trendy items. Our online store brings you
+                               the latest in designer products straight out of fashion houses. 
+                               ou can shop online at Style-UP from the comfort of your home and 
+                               get your favourites delivered right to your doorstep.</p>
+                      </div>
+                      <!-- Grid column -->
+                
+                    </div>
+                    <!-- Grid row-->
+                    <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+                
+                    <!-- Grid row-->
+                    <div class="row pb-3">
+                
+                      <!-- Grid column -->
+                      <div class="col-md-12">
+                
+                        <div class="mb-5 flex-center">
+                <center>
+                          <!-- Facebook -->
+                          <a class="fb-ic">
+                            <i class="fab fa-facebook-f fa-lg white-text mr-4"> <img src="https://image.flaticon.com/icons/svg/179/179319.svg" height="50" width="50" id="img"/></i>
+                          </a>
+                          <!-- Twitter -->
+                          <a class="tw-ic">
+                            <i class="fab fa-twitter fa-lg white-text mr-4"><img src="https://image.flaticon.com/icons/svg/179/179328.svg" height="50" width="50" id="img"/> </i>
+                          </a>
+                          <!-- Google +-->
+                          <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g fa-lg white-text mr-4"><img src="https://image.flaticon.com/icons/svg/179/179330.svg" height="50" width="50" id="img"/> </i>
+                          </a>
+                          <!--Linkedin -->
+                          <a class="li-ic">
+                            <i class="fab fa-linkedin-in fa-lg white-text mr-4"><img src="https://image.flaticon.com/icons/svg/179/179326.svg" height="50" width="50" id="img"/> </i>
+                          </a>
+                          <!--Instagram-->
+                          <a class="ins-ic">
+                            <i class="fab fa-instagram fa-lg white-text mr-4"> <img src="https://image.flaticon.com/icons/svg/179/179342.svg" height="50" width="50" id="img"/></i>
+                          </a>
+                          <!--Pinterest-->
+                    </center>      
+                
+                        </div>
+                
+                      </div>
+                      <!-- Grid column -->
+                
+                    </div>
+                    <!-- Grid row-->
+                
+                  </div>
+                  <!-- Footer Links -->
+                
+                  <!-- Copyright -->
+                  
+                  <!-- Copyright -->
+                </div>
+                </footer>
+                <!-- Footer -->
+                <footer id="sticky-footer" class="py-4 bg-dark text-white-50"style="background-color:#343a40;">
+                    <div class="container text-center">
+                      <small>Copyright &copy; Style-UP</small>
+                    </div>
+                  </footer>
+                  
+                
+
+</html>

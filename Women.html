@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>StyleUP</title>
+    <style>
+    
+        .card-img-top:hover
+         {
+            box-shadow: 0 0 20px rgba(33,33,33,.2); 
+         }
+         .text{
+            
+             text-transform: uppercase;
+    color: #3e4152;
+    letter-spacing: .15em;
+    font-size: 1.8em;
+    margin: 50px 0 10px 30px;
+    max-height: 5em;
+    font-weight: 500
+         }
+
+         
+         #img:hover {
+        height:55px;
+		width:55px;
+}
+        .cat{
+            box-shadow: 0 0 20px rgba(33,33,33,.2); 
+           padding-bottom:2%;
+        
+        }
+
+    </style>
+</head>
+ 
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	
+        <a class="navbar-brand" href="home.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVluUR_gITC8pG7vYq9__7fpx7p_eiLwWZQw&usqp=CAU" height="30" width="30"/>Style-UP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">HOME <span
+                            class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="men.html">MEN<span
+                            class="sr-only"></span></a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="Women.html"><b>WOMEN</b><span
+                            class="sr-only"></span></a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="Kids.html">KIDS<span
+                            class="sr-only"></span></a>
+                </li>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+            </ul>
+        </div>
+        
+
+
+        <!-- Button trigger login modal -->
+        <button type="button" class="btn btn-primary mx-2" data-toggle="modal" data-target="#LoginModal">
+            Log In
+        </button>
+
+        <!--login Modal -->
+        <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleLoginModalLabel">Log In</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="/login/">
+                            <div class="form-group">
+                                <label for="exampleInputUserName">Username</label>
+                                <input type="text" class="form-control" id="exampleInputUsername"
+                                    aria-describedby="usernameHelp" name="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                            </div>
+                            <button type="submit" class="btn btn-success">Log In</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button trigger SignUp modal -->
+        <button type="button" class="btn btn-primary mx-2" data-toggle="modal" data-target="#SignUpModal">
+            Sign Up
+        </button>
+
+        <!--SignUp Modal -->
+        <div class="modal fade" id="SignUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalSignUpLabel">Sign-Up</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="/signup/">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="Email.." name="email1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputUsername">Username</label>
+                                <input type="text" class="form-control" id="exampleInputUserName" name="username1">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="pass1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleConfirmPassword">Re-Type Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="pass2">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2020/10/2/04420ed7-224c-49e0-b3fd-a984140bd0251601657374569-Women-s-Sports-Wear_DeskBanner.jpg" class="d-block w-100" alt="">
+            <div class="carousel-caption d-none d-md-block">
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2020/9/30/552bd305-fae1-485a-ad4d-21a7170bcb211601487207200-Sarees_Desk_Banner.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+             
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2020/10/2/2059f310-84e2-4859-94a1-c72c5f9d2f911601657281307-Bestseller_W_Desk.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+            <br>
+            </div>
+            <div class="cat">
+            <p class="text">SHOP BY CATAGORY </p>
+            
+
+            <div class="card-group">
+                
+                <div class="card">
+                  <img class="card-img-top" id="b" src="https://m.media-amazon.com/images/G/31/img20/Fashion/EVENT/NewSeason/AF/WomenSBC/3-sbcs_01._SY530_QL85_.jpg" alt="Card image cap">
+                  <b><CENTER><P>CLOTHING</P></CENTER></b>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" id="b" src="https://m.media-amazon.com/images/G/31/img20/Fashion/EVENT/NewSeason/AF/WomenSBC/3-sbcs_02._SY530_QL85_.jpg" alt="Card image cap">
+                  <b><center><p>FOOTWARE</p></center></b>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" id="b" src="https://m.media-amazon.com/images/G/31/img20/Fashion/EVENT/NewSeason/AF/WomenSBC/3-sbcs_06._SY530_QL85_.jpg" alt="Card image cap">
+                    <b><center><p>MAKEUP</p></center></b>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" id="b" src="https://m.media-amazon.com/images/G/31/img20/Fashion/EVENT/NewSeason/AF/WomenSBC/3-sbcs_05._SY530_QL85_.jpg" alt="Card image cap">
+                    <b><center><P>HANDBAGS</P></center></b>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" id="b" src="https://m.media-amazon.com/images/G/31/img20/Fashion/EVENT/NewSeason/AF/LuggageSBC/3-sbcs_Luggage_02._SY530_QL85_.jpg" alt="Card image cap">
+                   <b><center><p>SPORTSWEAR</p></center></b> 
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" id="b" src="https://m.media-amazon.com/images/G/31/img20/Fashion/EVENT/NewSeason/AF/WomenSBC/3-sbcs_04._SY530_QL85_.jpg" alt="Card image cap">
+                    <b><center><p>ACCESSORIES</p></center></b>
+                  </div>
+                  </div>
+              </div>
+       
+        <p class="text">TRENDING IN CLOTHING </p>
+        <div class="card-group">
+            <div class="card">
+              <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/28/e4fe9b08-9d0a-4349-868f-6ac5aa7123ed1595935030800-Content-ethnicwear-trend-Bsummerreadyethnicdresses.jpg" alt="Card image cap">
+            </div>
+            <div class="card">
+              <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/8/21/99463248-ae80-47de-836f-3bafe2262bff1598029618274-Content-mostselling-Ethnicwear-Kurtasetsbiba.jpg" alt="Card image cap">
+              
+            </div>
+            <div class="card">
+              <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/f0397d0f-9c2a-4c87-956e-9896b615b3061597840342772-Content-ethnicwear-trend-printparadise.jpg" alt="Card image cap">
+              
+            </div>
+            <div class="card">
+                <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/8116410f-af2c-4980-95ef-04a4162092491597840566722-Content-westerncasual-color-preppyred.jpg" alt="Card image cap">
+                
+              </div>
+              <div class="card">
+                <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/8/21/580b804c-c529-421c-b0be-b311cab6e10b1598030134933-Content-mostselling-casualwear-Normalisboring.jpg" alt="Card image cap">
+                
+              </div>
+              <div class="card">
+                <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/d7f59b96-8e15-470e-a47b-5d5005e4273f1597840566776-Content-westerncasual-mostselling-modblocking.jpg" alt="Card image cap">
+                
+              </div>
+              
+          </div>
+
+          <p class="text">TRENDING IN FOOTWARE</p>
+          <div class="card-group">
+              <div class="card">
+                <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/8/20/cb3b10a6-a216-4f20-a4f1-81828bc923581597912691297-Content-footwear-trend-sneakerswomen.jpg" alt="Card image cap">
+              </div>
+              <div class="card">
+                <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/bb73b79f-ff6e-4472-b9da-33f5747c6d861597840342909-Content-footwear-occasion-classics.jpg" alt="Card image cap">
+                
+              </div>
+              <div class="card">
+                <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/1fb4a81c-d5e2-4e46-93d8-b6a87ca92c021597840342817-Content-footwear-color-colorblock.jpg" alt="Card image cap">
+                
+              </div>
+              <div class="card">
+                  <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/8/21/76d839cb-b561-42a5-aaa3-6d4e49d0c56f1598030134822-Content-mostselling-Footwear-Rocia.jpg" alt="Card image cap">
+                  
+                </div>
+                <div class="card">
+                  <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/28/1b444433-164b-4551-9749-d2915a286ee01595935221365-Content-Footwear-Women-Comfort-Wear.jpg" alt="Card image cap">
+                  
+                </div>
+               
+            </div>
+
+            
+
+              <p class="text">TRENDING IN SPORTSWEAR</p>
+              <div class="card-group">
+                  <div class="card">
+                    <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/48f02c04-8b83-495b-a2df-27ed8a9837a61597840566563-Content-sportswear-mostselling-skechers.png" alt="Card image cap">
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/7c0ac6d4-94aa-4c56-b6e7-86f7367a1ead1597841103213-Content-sportswear-brand-UA.png" alt="Card image cap">
+                    
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/28/ffc6f4f2-9541-47a2-ba12-e3c68c9407461595935799402-Content-sportswear-Women-Under-Armour-daily-wear-Joggers.jpg" alt="Card image cap">
+                    
+                  </div>
+                  <div class="card">
+                      <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/28/ba7ebb65-b743-4947-b7b0-2f62a3c912cf1595935799269-Content-sportswear-Women-Athleisure.jpg" alt="Card image cap">
+                      
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/28/0faf749f-5450-4550-8b48-54b2d2e311b51595935799329-Content-sportswear-Women-Running.jpg" alt="Card image cap">
+                      
+                    </div>
+                   
+                </div>
+
+                <p class="text">TRENDING IN ACCESSORIES</p>
+                <div class="card-group">
+                    <div class="card">
+                      <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/225f77f5-c299-4849-8586-3ed41b70b1f91597840217917-Content-accessories-brand-imittire.png" alt="Card image cap">
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/b5fb5332-cad0-4c04-bd5e-70189f5efef01597840218056-Content-accessories-mostselling-mangalsutra.png" alt="Card image cap">
+                      
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/4dbcc869-ba34-43df-8348-56c7816363c41597840218100-Content-accessories-trend-handcraftedjewel.png" alt="Card image cap">
+                      
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/8/21/bc36f35b-f5ce-4168-bd96-d3c1f65ec4e21598030134870-Content-mostselling-Accessories-Rosegoldwatch.jpeg" alt="Card image cap">
+                        
+                      </div>
+                      <div class="card">
+                        <img class="card-img-top" id="a" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/5e68d729-b955-431c-930c-931d8b452d421597840217983-Content-accessories-color-white.png" alt="Card image cap">
+                        
+                      </div>
+                     
+                  </div>
+              <center>
+              <p class="text">POPULAR BRANDS </p></center>
+              <div class="card-group">
+                <div class="card">
+                  <img class="card-img-top" id="a" src="https://m.media-amazon.com/images/G/31/img20/Fashion/EVENT/NewSeason/AF/TopBrands/basicsbrandtiles_03._SS400_QL85_.jpg" alt="Card image cap">
+                </div>
+                <div class="card">
+                  <img class="card-img-top" id="a" src="https://m.media-amazon.com/images/G/31/img20/Fashion/EVENT/NewSeason/AF/TopBrands/basicsbrandtiles_04._SS400_QL85_.jpg" alt="Card image cap">
+                  
+                </div>
+                <div class="card">
+                  <img class="card-img-top" id="a" src="https://m.media-amazon.com/images/G/31/img20/Fashion/EVENT/NewSeason/AF/ExploreTopBrands/brandtiles_03._SS400_QL85_.jpg" alt="Card image cap">
+                  
+                </div>
+                <div class="card">
+                    <img class="card-img-top" id="a" src="https://m.media-amazon.com/images/G/31/img20/Fashion/EVENT/NewSeason/AF/ExploreTopBrands/brandtiles_04._SS400_QL85_.jpg" alt="Card image cap">
+                    
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" id="a" src="https://m.media-amazon.com/images/G/31/img20/Fashion/EVENT/NewSeason/AF/TopBrands/basicsbrandtiles_05._SS400_QL85_.jpg" alt="Card image cap">
+                    
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" id="a" src="https://m.media-amazon.com/images/G/31/img20/Fashion/EVENT/NewSeason/AF/TopBrands/brandtiles_Titan_06._SS400_QL85_.jpg" alt="Card image cap">
+                    
+                  </div>
+              </div>
+             
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+			
+			<div  style="background-color:#adb5bd78;">
+                <hr >
+                <!-- Footer -->
+                <footer class="page-footer font-small ">
+                
+                  <!-- Footer Links -->
+                  <div class="container">
+                
+                    <!-- Grid row-->
+                    <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+                
+                      <!-- Grid column -->
+                      <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                          <a href="Gift.html" Style="color:#495057;">Gift Cards</a>
+                        </h6>
+                      </div>
+                    
+                      <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                          <a href="FAQ.html"Style="color:#495057;">Help</a>
+                        </h6>
+                      </div>
+                      <!-- Grid column -->
+                
+                      <!-- Grid column -->
+                      <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                          <a href="https://openweather.co.uk/storage/app/media/Terms/Openweather_website_terms_and_conditions_of_use.pdf"Style="color:#495057;">Policy</a>
+                        </h6>
+                      </div>
+                      
+                      <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                          <a href="FAQ.html"Style="color:#495057;">Contact</a>
+                        </h6>
+                      </div>
+                      <!-- Grid column -->
+                
+                    </div>
+                    <!-- Grid row-->
+                    <hr class="rgba-white-light" style="margin: 0 15%;">
+                
+                    <!-- Grid row-->
+                    <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+                
+                      <!-- Grid column -->
+                      <div class="col-md-8 col-12 mt-5">
+                        <p style="line-height: 1.7rem"> <b>ONLINE SHOPPING MADE EASY AT Style-UP</b>
+                            <br>
+                           <br>
+                            If you would like to experience the best of online shopping for 
+                            men, women and kids in India, you are at the right place. 
+                            Style-UP is the ultimate destination for fashion and lifestyle,
+                             being host to a wide array of merchandise including clothing,
+                              footwear, accessories, jewellery, personal care products and 
+                              more. It is time to redefine your style statement with our 
+                              treasure-trove of trendy items. Our online store brings you
+                               the latest in designer products straight out of fashion houses. 
+                               ou can shop online at Style-UP from the comfort of your home and 
+                               get your favourites delivered right to your doorstep.</p>
+                      </div>
+                      <!-- Grid column -->
+                
+                    </div>
+                    <!-- Grid row-->
+                    <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+                
+                    <!-- Grid row-->
+                    <div class="row pb-3">
+                
+                      <!-- Grid column -->
+                      <div class="col-md-12">
+                
+                        <div class="mb-5 flex-center">
+                <center>
+                          <!-- Facebook -->
+                          <a class="fb-ic">
+                            <i class="fab fa-facebook-f fa-lg white-text mr-4"> <img src="https://image.flaticon.com/icons/svg/179/179319.svg" height="50" width="50" id="img"/></i>
+                          </a>
+                          <!-- Twitter -->
+                          <a class="tw-ic">
+                            <i class="fab fa-twitter fa-lg white-text mr-4"><img src="https://image.flaticon.com/icons/svg/179/179328.svg" height="50" width="50" id="img"/> </i>
+                          </a>
+                          <!-- Google +-->
+                          <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g fa-lg white-text mr-4"><img src="https://image.flaticon.com/icons/svg/179/179330.svg" height="50" width="50" id="img"/> </i>
+                          </a>
+                          <!--Linkedin -->
+                          <a class="li-ic">
+                            <i class="fab fa-linkedin-in fa-lg white-text mr-4"><img src="https://image.flaticon.com/icons/svg/179/179326.svg" height="50" width="50" id="img"/> </i>
+                          </a>
+                          <!--Instagram-->
+                          <a class="ins-ic">
+                            <i class="fab fa-instagram fa-lg white-text mr-4"> <img src="https://image.flaticon.com/icons/svg/179/179342.svg" height="50" width="50" id="img"/></i>
+                          </a>
+                          <!--Pinterest-->
+                    </center>      
+                
+                        </div>
+                
+                      </div>
+                      <!-- Grid column -->
+                
+                    </div>
+                    <!-- Grid row-->
+                
+                  </div>
+                  <!-- Footer Links -->
+                
+                  <!-- Copyright -->
+                  
+                  <!-- Copyright -->
+                </div>
+                </footer>
+                <!-- Footer -->
+                <footer id="sticky-footer" class="py-4 bg-dark text-white-50"style="background-color:#343a40;">
+                    <div class="container text-center">
+                      <small>Copyright &copy; Style-UP</small>
+                    </div>
+                  </footer>
+                  
+                
+
+</html>

@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>StyleUP</title>
+    <style>
+    
+        .card-img-top:hover
+         {
+            box-shadow: 0 0 20px rgba(33,33,33,.2); 
+         }
+         .text{
+            
+             text-transform: uppercase;
+    color: #3e4152;
+    letter-spacing: .15em;
+    font-size: 1.8em;
+    margin: 50px 0 10px 30px;
+    max-height: 5em;
+    font-weight: 500
+         }
+
+         
+         #img:hover {
+        height:55px;
+		width:55px;
+}
+         
+	
+		
+
+    </style>
+</head>
+ 
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	
+        <a class="navbar-brand" href="home.htmL"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVluUR_gITC8pG7vYq9__7fpx7p_eiLwWZQw&usqp=CAU" height="30" width="30"/>Style-UP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">HOME <span
+                            class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="men.html">MEN<span
+                            class="sr-only"></span></a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="Women.html">WOMEN<span
+                            class="sr-only"></span></a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="Kids.html">KIDS<span
+                            class="sr-only"></span></a>
+                </li>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+            </ul>
+        </div>
+        
+
+
+        <!-- Button trigger login modal -->
+        <button type="button" class="btn btn-primary mx-2" data-toggle="modal" data-target="#LoginModal">
+            Log In
+        </button>
+
+        <!--login Modal -->
+        <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleLoginModalLabel">Log In</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="/login/">
+                            <div class="form-group">
+                                <label for="exampleInputUserName">Username</label>
+                                <input type="text" class="form-control" id="exampleInputUsername"
+                                    aria-describedby="usernameHelp" name="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                            </div>
+                            <button type="submit" class="btn btn-success">Log In</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button trigger SignUp modal -->
+        <button type="button" class="btn btn-primary mx-2" data-toggle="modal" data-target="#SignUpModal">
+            Sign Up
+        </button>
+
+        <!--SignUp Modal -->
+        <div class="modal fade" id="SignUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalSignUpLabel">Sign-Up</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="/signup/">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="Email.." name="email1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputUsername">Username</label>
+                                <input type="text" class="form-control" id="exampleInputUserName" name="username1">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="pass1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleConfirmPassword">Re-Type Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="pass2">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<br>
+<br>
+    <div class="card mb-3" style="margin:2%; box-shadow: 0 0 20px rgba(33,33,33,.2); ">
+        <div class="card-body">
+          <h5 class="card-title"><center>SHIPPING</center></h5>
+          <p class="card-text">We strive to deliver products purchased from Style-UP in excellent condition and in the fastest time possible. If this is your first order with Style-UP, shipping will be completely FREE. 
+              Also, for all the subsequent Orders of Rs. 799/- (Rs. 499/- for the orders only with Personal Care items) or more, we will deliver the order to your doorstep free of cost. A platform handling fee of Rs. 99/- 
+              will be applicable to the orders under Rs. 799/- and Rs.49/- will be applicable for the orders with only Personal Care items.1. If the order is cancelled, lost or un - delivered to your preferred location,
+               we will refund the complete order amount including any platform handling fee, if paid online.2. If you return an order delivered to you, platform handling fee will not be refunded.However if you self - 
+               ship your returns, we will reimburse self - shipment charges based on Style-UP 's Returns Policy. For accounts whose return behavior violates our fair usage policy, platform handling fee will be non - 
+               refundable irrespective of order value.
+
+            *Order value is calculated after applying discounts / VAT / GST or any other applicable charges</p>
+          
+        </div>
+      </div>
+      <div class="card" style="margin:2%;box-shadow: 0 0 20px rgba(33,33,33,.2); ">
+        <div class="card-body">
+          <h5 class="card-title"><CENTER>CANCELLATION</CENTER></h5>
+          <p class="card-text">You can now cancel an order when it is in packed/shipped status, as long as the cancel option is available on App/Website/M-site. This includes items purchased on sale also. 
+              Any amount paid will be credited into the same payment mode using which the payment was made</p>
+        
+        </div>
+       
+      </div>
+      <div class="card mb-3" style="margin:2%;box-shadow: 0 0 20px rgba(33,33,33,.2); ">
+        <div class="card-body">
+          <h5 class="card-title"><center>RETURN</center></h5>
+          <p class="card-text">Style-UP returns and exchange policy gives you an option to return or exchange items purchased on Style-UP for any reason within the specified return/exchange period 
+              (check product details page for the same). We only ask that you don't use the product and preserve its original condition, tags, and packaging. You are welcome to try on a product but 
+              please take adequate measure to preserve its condition. There are two ways to return the product to us:
+
+<ol>
+           <li> Pick up: In most locations, we offer a free pick up service. You will see a pickup option when you submit a return request.</li>
+            <li>If we don't offer a pick up at your location. In such cases, we will credit the shipping costs in the form of Style-UP credits provided the product meets the return policy and you
+             have shared scan copy of the courier receipt with us.</li> 
+      </ol>      
+            During Pick Up, our delivery agent may do a quality check on the return. For a successful pick up, we will initiate a doorstep refund for the return amount into the refund mode selected at
+             the time of initiating the return request. This doorstep refund may not be applicable for some pin codes in which case refund will be initiated after the product has been received at our 
+             warehouse and has passed a quality check. If the picked up product does not pass the quality check, we shall ship it back to you. If you choose to exchange the item for reason of mismatch
+              of size or receipt of a defective item, you will be provided with a replacement of the item, free of cost. However all exchanges are subject to stock availability and subject to your address
+               being serviceable for an exchange. If you choose to exchange an item, our delivery representative will deliver the new item to you and simultaneously pick up the original item from you.
+                Please note that we are only able to offer size exchanges. If you wish to exchange your item for an alternative product, we suggest that you return it to obtain refund and purchase the new 
+                item separately.
+            
+            The following EXCEPTIONS and RULES apply to this Policy:
+            
+           <ol>
+         <li>  Swarovski, Precious Jewelry, Cosmetics, Rayban Sunglasses, Socks, Deodorants, Perfumes, Briefs, Shapewear Bottoms, any Lingerie Set that includes a Brief, Swimwear, Mittens, Wrist-Bands cannot
+             be exchanged or returned.
+            </li>
+            <li>
+            Some products like fine jewellery, watches and selected products which are susceptible to damage can only be returned/exchanged for a limited number of days. Certain products like sherwanis can 
+            only be exchanged not returned. Please read the Product Detail Page to see the number of days upto which a product can be returned/exchanged, post-delivery.
+            </li>
+           <li> Due to the intimate nature, we handle returns for certain Innerwear, Sleepwear and Lingerie items differently. Only self-ship return is allowed for such items, hence pickup facility will not be 
+            available.Also, these items cannot be exchanged.</li>
+            
+            <li>items to be returned or exchanged must be unused and in their original condition with all original tags and packaging intact (for e.g. shoes must be packed in the original shoe box).
+            </li>
+           <li> Under Exchange Policy, only size exchanges are allowed. Items can be exchanged for a similar size or a different size. Exchanges are allowed only if your address is serviceable for an exchange 
+            by our Logistics team.</li>
+           <li> In case you have purchased an item which has a free gift/offer associated with it and you wish to return the main item, then you will have to return the free product as well</li>
+           <li>Style-UP will not be liable for the products returned by mistake. In circumstances where an extra or a different product is returned by mistake, Myntra would not be accountable for misplacement 
+            or replacement of the product and is not responsible for its delivery back to the User</li>
+           <li> If you self-ship your returns, kindly pack the items securely to prevent any loss or damage during transit. For all self-shipped returns, we recommend you use a reliable courier service.</li>
+           <li> If you self-ship your returns, your shipping costs would be reimbursed subject to your return having met our Returns and Exchange Policy and the image of the courier receipt is shared by you and 
+            validated by us. For self ship returns the refund for returned products will only be initiated if they pass through a quality check conducted at the warehouse. If the quality check fails the product
+             will be reshipped back to you.</li></ol></p>
+         
+        </div>
+      </div>
+      <div class="card" style="margin:2%;box-shadow: 0 0 20px rgba(33,33,33,.2); ">
+        <div class="card-body">
+          <h5 class="card-title"><CENTER>FAQ</CENTER></h5>
+          <p class="card-text"><b>What is Try and Buy Service?</b></p>
+          <p class="card-text"><small class="text-muted">This service entitles you to try out your purchases at the time of delivery, pay only for what you like and return the rest on-the-spot. 
+              Try and Buy is a paid service, available on most of the products and in 31 Cities, you can enter pin code on product page to check service availability. 
+              Try and Buy is only available on orders containing &lt;=5 items in cart. To avail this service min. order value should be Rs.1199 and above. To avail the service, 
+              please ensure that you tick the 'Try and Buy' box on check-out page and choose delivery address where you are comfortable trying product. Terms of service may differ for our new customers.
+
+            Try and Buy will not be available during big sale days; We will re-offer the service, post such events.</small></p>
+        <br>
+        <p class="card-text"><b>Why are there different prices for the same product? Is it legal?</b></p>
+          <p class="card-text"><small class="text-muted">Style-UP is an online marketplace platform that enables independent sellers to sell their products to buyers. 
+              The prices are solely decided by the sellers, and Style-UP does not interfere in the same. There could be a possibility that the same product is sold by different sellers at different prices. 
+              Myntra rightfully fulfils all legal compliances of onboarding multiple sellers on its forum as it is a marketplace platform.
+
+          </small></p>
+        
+        </div>
+       
+      </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+			
+			<div  style="background-color:#adb5bd78;">
+                <hr >
+                <!-- Footer -->
+                <footer class="page-footer font-small ">
+                
+                  <!-- Footer Links -->
+                  <div class="container">
+                
+                    <!-- Grid row-->
+                    <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+                
+                      <!-- Grid column -->
+                      <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                          <a href="Gift.html" Style="color:#495057;">Gift Cards</a>
+                        </h6>
+                      </div>
+                    
+                      <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                          <a href="FAQ.html"Style="color:#495057;">Help</a>
+                        </h6>
+                      </div>
+                      <!-- Grid column -->
+                
+                      <!-- Grid column -->
+                      <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                          <a href="https://openweather.co.uk/storage/app/media/Terms/Openweather_website_terms_and_conditions_of_use.pdf"Style="color:#495057;">Policy</a>
+                        </h6>
+                      </div>
+                      
+                      <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                          <a href="FAQ.html"Style="color:#495057;">Contact</a>
+                        </h6>
+                      </div>
+                      <!-- Grid column -->
+                
+                    </div>
+                    <!-- Grid row-->
+                    <hr class="rgba-white-light" style="margin: 0 15%;">
+                
+                    <!-- Grid row-->
+                    <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+                
+                      <!-- Grid column -->
+                      <div class="col-md-8 col-12 mt-5">
+                        <p style="line-height: 1.7rem"> <b>ONLINE SHOPPING MADE EASY AT Style-UP</b>
+                            <br>
+                           <br>
+                            If you would like to experience the best of online shopping for 
+                            men, women and kids in India, you are at the right place. 
+                            Style-UP is the ultimate destination for fashion and lifestyle,
+                             being host to a wide array of merchandise including clothing,
+                              footwear, accessories, jewellery, personal care products and 
+                              more. It is time to redefine your style statement with our 
+                              treasure-trove of trendy items. Our online store brings you
+                               the latest in designer products straight out of fashion houses. 
+                               ou can shop online at Style-UP from the comfort of your home and 
+                               get your favourites delivered right to your doorstep.</p>
+                      </div>
+                      <!-- Grid column -->
+                
+                    </div>
+                    <!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!--Grid row-->
+      <div class="row">
+  
+        <!--Grid column-->
+       
+        <!--Grid column-->
+  
+        <!--Grid column-->
+   
+        <div class="col-md-6 mb-4">
+  
+         
+           <div class="input-group-append">
+              <button class="btn btn-sm btn-outline-white my-0" type="button">EMAIL</button>
+              <form class="input-group">
+                <input type="text" class="form-control form-control-sm" placeholder="Your email"
+                  aria-label="Your email" aria-describedby="basic-addon2">
+            </div>
+          </form>
+  
+        </div>
+        <div class="col-md-6 mb-4">
+  
+            <form class="input-group">
+                <div class="input-group-append">
+                    <button class="btn btn-sm btn-outline-white my-0" type="button"></button>
+                
+                  </div>
+                  <label>enter query </label>
+              <textarea class="form-control form-control-sm" 
+                aria-describedby="basic-addon2">
+            </textarea>
+            <button STYLE="background-color: green;" value="Submit"></button>
+            </form>
+    
+          </div>
+    
+        <!--Grid column-->
+  
+      </div>
+      <!--Grid row-->
+  
+    </div>
+ 
+                    <!-- Grid row-->
+                    <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+                
+                    <!-- Grid row-->
+                    <div class="row pb-3">
+                
+                      <!-- Grid column -->
+                      <div class="col-md-12">
+                
+                        <div class="mb-5 flex-center">
+                <center>
+                          <!-- Facebook -->
+                          <a class="fb-ic">
+                            <i class="fab fa-facebook-f fa-lg white-text mr-4"> <img src="https://image.flaticon.com/icons/svg/179/179319.svg" height="50" width="50" id="img"/></i>
+                          </a>
+                          <!-- Twitter -->
+                          <a class="tw-ic">
+                            <i class="fab fa-twitter fa-lg white-text mr-4"><img src="https://image.flaticon.com/icons/svg/179/179328.svg" height="50" width="50" id="img"/> </i>
+                          </a>
+                          <!-- Google +-->
+                          <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g fa-lg white-text mr-4"><img src="https://image.flaticon.com/icons/svg/179/179330.svg" height="50" width="50" id="img"/> </i>
+                          </a>
+                          <!--Linkedin -->
+                          <a class="li-ic">
+                            <i class="fab fa-linkedin-in fa-lg white-text mr-4"><img src="https://image.flaticon.com/icons/svg/179/179326.svg" height="50" width="50" id="img"/> </i>
+                          </a>
+                          <!--Instagram-->
+                          <a class="ins-ic">
+                            <i class="fab fa-instagram fa-lg white-text mr-4"> <img src="https://image.flaticon.com/icons/svg/179/179342.svg" height="50" width="50" id="img"/></i>
+                          </a>
+                          <!--Pinterest-->
+                    </center>      
+                
+                        </div>
+                
+                      </div>
+                      <!-- Grid column -->
+                
+                    </div>
+                    <!-- Grid row-->
+                
+                  </div>
+                  <!-- Footer Links -->
+                
+                  <!-- Copyright -->
+                  
+                  <!-- Copyright -->
+                </div>
+                </footer>
+                <!-- Footer -->
+                <footer id="sticky-footer" class="py-4 bg-dark text-white-50"style="background-color:#343a40;">
+                    <div class="container text-center">
+                      <small>Copyright &copy; Style-UP</small>
+                    </div>
+                  </footer>
+                  
+                
+
+</html>
